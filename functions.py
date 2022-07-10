@@ -78,48 +78,32 @@ def root_to_DF(List_Signal_and_Background, list_of_classification, selected_vari
     return dataframe
 
 def efficiency(yprob,ytest):
-    _, bin_edges = np.histogram(yprob, bins=np.linspace(0,1,101))
+    bin_edges = np.linspace(0,1,101)
+    s_eff = []
+    b_eff = []
 
-    background_hist = []
-    signal_hist = []
-    count_list_0 = []
-    count_list_1 = []
-
-
-    #signal histogram and signal efficiency
-    #signal hist 
-    #if ytest == 1 get yprob
-    for index, value in enumerate(ytest):
-        if value ==1:
-            signal_hist.append(yprob[index])
-            #print("signal       :" ,yprob[index,1], "   ytest:",value)
-        else:
-            background_hist.append(yprob[index])
-            #print("background   :" ,yprob[index,1], "   ytest:",value)
-
-    #signal efficiency
-    #get number of all signal_hit > probability/bin_edges
-    for i1 in bin_edges:
-        count1 = 0
-        for j1 in signal_hist:
-            if i1 < j1:
-                count1 +=1
-        count_list_1.append(count1)
-    count_list_1 = np.array(count_list_1)
-    signal_eff = count_list_1/len(signal_hist)
+#----------------SIGNAL..............................................
+    #hist 
+    s_hist= yprob*ytest
+    s_hist = s_hist[s_hist!=0]      #overwrites s_hist with an array with no 0 values
+    counts,_ = np.histogram(s_hist,bins = bin_edges)
+    for i in range(len(bin_edges)):
+        s_eff.append(sum(counts[i:])/sum(counts))
+    s_eff = np.array(s_eff)
 
 
-    #bakcground efficiency
-    #get number of all background_hit > probability/bin_edges
-    for i0 in bin_edges:
-        count0 = 0
-        for j0 in background_hist:
-            if i0 < j0:
-                count0 +=1
-        count_list_0.append(count0)
-    count_list_0 = np.array(count_list_0)
-    background_eff = count_list_0/len(background_hist)
-    return signal_hist, background_hist,signal_eff, background_eff, bin_edges
+#----------------BACKGROUND.............................................
+    #hist 
+    b_hist = yprob*(1-ytest)
+    b_hist = b_hist[b_hist != 0]     #removes the 0 values
+
+    #efficiency
+    counts,_ = np.histogram(b_hist,bins = bin_edges)
+    
+    for i in range(len(bin_edges)):
+        b_eff.append(sum(counts[i:])/sum(counts))
+    b_eff = np.array(b_eff)
+    return s_hist, b_hist,s_eff, b_eff, bin_edges
 
 def hist_sig_back(bhist,shist,bin_edges,save_path):
     plt.figure(figsize=(9,6))
