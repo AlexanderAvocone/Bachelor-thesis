@@ -1,0 +1,187 @@
+009 (2927994.000.000) 2022-07-27 12:23:22 Job was aborted.
+	via condor_rm (by user aavocone)
+...
+000 (2927995.000.000) 2022-07-27 12:23:30 Job submitted from host: <129.13.101.196:9618?addrs=[2a00-1398-5-fe01-225-90ff-febd-da32]-9618+129.13.101.196-9618&alias=portal1.etp.kit.edu&noUDP&sock=schedd_3509_75ea>
+...
+040 (2927995.000.000) 2022-07-27 12:24:56 Started transferring input files
+	Transferring to host: <129.13.101.128:9618?addrs=129.13.101.128-9618+[2a00-1398-5-fe01-5ce6-73b4-59ff-991a]-9618&alias=ms01.etp.kit.edu&noUDP&sock=slot1_1_4453_4a8e_99979>
+...
+040 (2927995.000.000) 2022-07-27 12:24:57 Finished transferring input files
+...
+001 (2927995.000.000) 2022-07-27 12:24:57 Job executing on host: <129.13.101.128:9618?addrs=129.13.101.128-9618+[2a00-1398-5-fe01-5ce6-73b4-59ff-991a]-9618&alias=ms01.etp.kit.edu&noUDP&sock=startd_1453_3732>
+...
+006 (2927995.000.000) 2022-07-27 12:25:06 Image size of job updated: 5
+	5  -  MemoryUsage of job (MB)
+	5680  -  ResidentSetSize of job (KB)
+...
+006 (2927995.000.000) 2022-07-27 12:30:07 Image size of job updated: 72715
+	72715  -  MemoryUsage of job (MB)
+	74460704  -  ResidentSetSize of job (KB)
+...
+006 (2927995.000.000) 2022-07-27 12:33:24 Image size of job updated: 89914
+	89914  -  MemoryUsage of job (MB)
+	92072240  -  ResidentSetSize of job (KB)
+...
+040 (2927995.000.000) 2022-07-27 12:33:24 Started transferring output files
+...
+040 (2927995.000.000) 2022-07-27 12:33:24 Finished transferring output files
+...
+005 (2927995.000.000) 2022-07-27 12:33:25 Job terminated.
+	(1) Normal termination (return value 1)
+		Usr 0 00:09:07, Sys 0 00:03:21  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:09:07, Sys 0 00:03:21  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	3232  -  Run Bytes Sent By Job
+	713  -  Run Bytes Received By Job
+	3232  -  Total Bytes Sent By Job
+	713  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     0.00       40        40 
+	   Disk (KB)            :    25     1000000   1385397 
+	   Memory (MB)          : 89914      100000    100096 
+
+	Job terminated of its own accord at 2022-07-27T10:33:24Z with exit-code 1.
+...
+000 (2927996.000.000) 2022-07-27 12:47:25 Job submitted from host: <129.13.101.196:9618?addrs=[2a00-1398-5-fe01-225-90ff-febd-da32]-9618+129.13.101.196-9618&alias=portal1.etp.kit.edu&noUDP&sock=schedd_3509_75ea>
+...
+040 (2927996.000.000) 2022-07-27 12:47:57 Started transferring input files
+	Transferring to host: <129.13.101.128:9618?addrs=129.13.101.128-9618+[2a00-1398-5-fe01-5ce6-73b4-59ff-991a]-9618&alias=ms01.etp.kit.edu&noUDP&sock=slot1_1_4453_4a8e_99983>
+...
+040 (2927996.000.000) 2022-07-27 12:47:58 Finished transferring input files
+...
+001 (2927996.000.000) 2022-07-27 12:47:58 Job executing on host: <129.13.101.128:9618?addrs=129.13.101.128-9618+[2a00-1398-5-fe01-5ce6-73b4-59ff-991a]-9618&alias=ms01.etp.kit.edu&noUDP&sock=startd_1453_3732>
+...
+006 (2927996.000.000) 2022-07-27 12:48:07 Image size of job updated: 13
+	13  -  MemoryUsage of job (MB)
+	13316  -  ResidentSetSize of job (KB)
+...
+006 (2927996.000.000) 2022-07-27 12:53:08 Image size of job updated: 75251
+	75251  -  MemoryUsage of job (MB)
+	77057852  -  ResidentSetSize of job (KB)
+...
+006 (2927996.000.000) 2022-07-27 12:58:09 Image size of job updated: 92114
+	92114  -  MemoryUsage of job (MB)
+	94325532  -  ResidentSetSize of job (KB)
+...
+012 (2927996.000.000) 2022-07-27 13:02:22 Job was held.
+	Job used more disk space than requested.
+	Code 26 Subcode 0
+...
+009 (2927996.000.000) 2022-07-27 13:59:19 Job was aborted.
+	via condor_rm (by user aavocone)
+...
+000 (2927998.000.000) 2022-07-27 14:00:09 Job submitted from host: <129.13.101.196:9618?addrs=[2a00-1398-5-fe01-225-90ff-febd-da32]-9618+129.13.101.196-9618&alias=portal1.etp.kit.edu&noUDP&sock=schedd_3509_75ea>
+...
+040 (2927998.000.000) 2022-07-27 14:10:22 Started transferring input files
+	Transferring to host: <129.13.101.152:9618?addrs=129.13.101.152-9618+[2a00-1398-5-fe01-c067-e1ff-fe15-c86b]-9618&alias=mdm1.ekp.kit.edu&noUDP&sock=slot1_93_2620227_b550_58686>
+...
+040 (2927998.000.000) 2022-07-27 14:10:22 Finished transferring input files
+...
+001 (2927998.000.000) 2022-07-27 14:10:23 Job executing on host: <129.13.101.152:9618?addrs=129.13.101.152-9618+[2a00-1398-5-fe01-c067-e1ff-fe15-c86b]-9618&alias=mdm1.ekp.kit.edu&noUDP&sock=startd_2620180_1f0a>
+...
+006 (2927998.000.000) 2022-07-27 14:10:32 Image size of job updated: 9
+	9  -  MemoryUsage of job (MB)
+	10008  -  ResidentSetSize of job (KB)
+...
+006 (2927998.000.000) 2022-07-27 14:15:13 Image size of job updated: 86444
+	86444  -  MemoryUsage of job (MB)
+	88519392  -  ResidentSetSize of job (KB)
+...
+040 (2927998.000.000) 2022-07-27 14:15:13 Started transferring output files
+...
+040 (2927998.000.000) 2022-07-27 14:15:13 Finished transferring output files
+...
+005 (2927998.000.000) 2022-07-27 14:15:13 Job terminated.
+	(1) Normal termination (return value 1)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:01, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	1074  -  Run Bytes Sent By Job
+	713  -  Run Bytes Received By Job
+	1074  -  Total Bytes Sent By Job
+	713  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     0.00       40        40 
+	   Disk (KB)            :    23     1000000   5298931 
+	   Memory (MB)          : 86444      100000    100096 
+
+	Job terminated of its own accord at 2022-07-27T12:13:45Z with exit-code 1.
+...
+000 (2927999.000.000) 2022-07-27 14:33:07 Job submitted from host: <129.13.101.196:9618?addrs=[2a00-1398-5-fe01-225-90ff-febd-da32]-9618+129.13.101.196-9618&alias=portal1.etp.kit.edu&noUDP&sock=schedd_3509_75ea>
+...
+040 (2927999.000.000) 2022-07-27 14:34:58 Started transferring input files
+	Transferring to host: <129.13.101.152:9618?addrs=129.13.101.152-9618+[2a00-1398-5-fe01-c067-e1ff-fe15-c86b]-9618&alias=mdm1.ekp.kit.edu&noUDP&sock=slot1_39_2620227_b550_58800>
+...
+040 (2927999.000.000) 2022-07-27 14:34:58 Finished transferring input files
+...
+001 (2927999.000.000) 2022-07-27 14:34:59 Job executing on host: <129.13.101.152:9618?addrs=129.13.101.152-9618+[2a00-1398-5-fe01-c067-e1ff-fe15-c86b]-9618&alias=mdm1.ekp.kit.edu&noUDP&sock=startd_2620180_1f0a>
+...
+006 (2927999.000.000) 2022-07-27 14:35:08 Image size of job updated: 36
+	36  -  MemoryUsage of job (MB)
+	37176  -  ResidentSetSize of job (KB)
+...
+006 (2927999.000.000) 2022-07-27 14:40:10 Image size of job updated: 88968
+	88968  -  MemoryUsage of job (MB)
+	91103820  -  ResidentSetSize of job (KB)
+...
+006 (2927999.000.000) 2022-07-27 14:40:38 Image size of job updated: 92115
+	92115  -  MemoryUsage of job (MB)
+	94326468  -  ResidentSetSize of job (KB)
+...
+040 (2927999.000.000) 2022-07-27 14:40:38 Started transferring output files
+...
+040 (2927999.000.000) 2022-07-27 14:40:38 Finished transferring output files
+...
+005 (2927999.000.000) 2022-07-27 14:40:39 Job terminated.
+	(0) Abnormal termination (signal 11)
+	(0) No core file
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:07:34, Sys 0 00:03:19  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	505  -  Run Bytes Sent By Job
+	713  -  Run Bytes Received By Job
+	505  -  Total Bytes Sent By Job
+	713  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :        0       40        40 
+	   Disk (KB)            :       22  1000000   5298931 
+	   Memory (MB)          :    92115   100000    100096 
+
+	Job terminated of its own accord at 2022-07-27T12:39:10Z with signal 11.
+...
+000 (2928000.000.000) 2022-07-27 14:44:00 Job submitted from host: <129.13.101.196:9618?addrs=[2a00-1398-5-fe01-225-90ff-febd-da32]-9618+129.13.101.196-9618&alias=portal1.etp.kit.edu&noUDP&sock=schedd_3509_75ea>
+...
+040 (2928000.000.000) 2022-07-27 14:44:58 Started transferring input files
+	Transferring to host: <129.13.101.152:9618?addrs=129.13.101.152-9618+[2a00-1398-5-fe01-c067-e1ff-fe15-c86b]-9618&alias=mdm1.ekp.kit.edu&noUDP&sock=slot1_39_2620227_b550_58802>
+...
+040 (2928000.000.000) 2022-07-27 14:44:58 Finished transferring input files
+...
+001 (2928000.000.000) 2022-07-27 14:44:59 Job executing on host: <129.13.101.152:9618?addrs=129.13.101.152-9618+[2a00-1398-5-fe01-c067-e1ff-fe15-c86b]-9618&alias=mdm1.ekp.kit.edu&noUDP&sock=startd_2620180_1f0a>
+...
+006 (2928000.000.000) 2022-07-27 14:45:08 Image size of job updated: 28
+	28  -  MemoryUsage of job (MB)
+	28680  -  ResidentSetSize of job (KB)
+...
+006 (2928000.000.000) 2022-07-27 14:50:08 Image size of job updated: 92470
+	92470  -  MemoryUsage of job (MB)
+	94689580  -  ResidentSetSize of job (KB)
+...
+006 (2928000.000.000) 2022-07-27 16:05:21 Image size of job updated: 92470
+	92470  -  MemoryUsage of job (MB)
+	94689712  -  ResidentSetSize of job (KB)
+...
+000 (2931706.000.000) 2022-07-27 23:19:13 Job submitted from host: <129.13.101.196:9618?addrs=[2a00-1398-5-fe01-225-90ff-febd-da32]-9618+129.13.101.196-9618&alias=portal1.etp.kit.edu&noUDP&sock=schedd_3509_75ea>
+...
+009 (2931706.000.000) 2022-07-28 00:07:11 Job was aborted.
+	via condor_rm (by user aavocone)
+...
+000 (2931707.000.000) 2022-07-28 00:07:30 Job submitted from host: <129.13.101.196:9618?addrs=[2a00-1398-5-fe01-225-90ff-febd-da32]-9618+129.13.101.196-9618&alias=portal1.etp.kit.edu&noUDP&sock=schedd_3509_75ea>
+...
+000 (2931709.000.000) 2022-07-28 00:16:09 Job submitted from host: <129.13.101.196:9618?addrs=[2a00-1398-5-fe01-225-90ff-febd-da32]-9618+129.13.101.196-9618&alias=portal1.etp.kit.edu&noUDP&sock=schedd_3509_75ea>
+...
+009 (2931709.000.000) 2022-07-28 00:16:25 Job was aborted.
+	via condor_rm (by user aavocone)
+...

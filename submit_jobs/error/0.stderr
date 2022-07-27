@@ -1,0 +1,3 @@
+OMP: Warning #96: Cannot form a team with 256 threads, using 40 instead.
+OMP: Hint Consider unsetting KMP_DEVICE_THREAD_LIMIT (KMP_ALL_THREADS), KMP_TEAMS_THREAD_LIMIT, and OMP_THREAD_LIMIT (if any are set).
+./condor_exec.exe: line 34:   370 Segmentation fault      (core dumped) python3 /work/aavocone/CodePy/$1
