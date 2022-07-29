@@ -16,21 +16,16 @@ print("Importing train_test_split:")
 from sklearn.model_selection import train_test_split
 print("completed!\n")
 
+import pyarrow as pa
+import pyarrow.parquet as pq
+
 
 if __name__ == "__main__":
 
 
     print("Reading files:")
-    data        = pd.read_hdf("/ceph/aavocone/Datasets/signal3_large.h5", "df")
-    charged     = pd.read_hdf("/ceph/aavocone/Datasets/charged_large.h5", "df")
-    mixed       = pd.read_hdf("/ceph/aavocone/Datasets/mixed_large.h5", "df")
-    uu          = pd.read_hdf("/ceph/aavocone/Datasets/uu_large.h5", "df")
-    cc          = pd.read_hdf("/ceph/aavocone/Datasets/cc_large.h5", "df")
-    dd          = pd.read_hdf("/ceph/aavocone/Datasets/dd_large.h5", "df")
-    ss          = pd.read_hdf("/ceph/aavocone/Datasets/ss_large.h5", "df")
-    print("completed!\n")
-    sets =[data,charged,mixed,uu,cc,dd,ss]
-    df = pd.concat(sets)
+    df = pq.read_table("/ceph/aavocone/Datasets/3_large.parquet")
+    df = df.to_pandas()
 
 
     #test train split
@@ -47,8 +42,7 @@ if __name__ == "__main__":
     print("test4\n")
 
 
-    model500 = xgb.XGBClassifier()
-    model500.load_model("/work/aavocone/models/model500.txt")
+
     estimator = 800
 
 
@@ -59,5 +53,5 @@ if __name__ == "__main__":
                                 verbosity=0, n_jobs = 30
                             )
                             
-    model.fit(xtrain,ytrain, eval_set=[(xval,yval)], xgb_model=model500)
+    model.fit(xtrain,ytrain, eval_set=[(xval,yval)])
     model.save_model(f"/work/aavocone/models/3_0_model{estimator}.txt")
