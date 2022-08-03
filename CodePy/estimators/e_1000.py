@@ -41,16 +41,17 @@ if __name__ == "__main__":
     print("test4\n")
 
 
-
+    model1000 = xgb.XGBClassifier()
+    model1000.load_model("/ceph/aavocone/models/3_0_model1000.txt")
     estimator = 1000
 
 
     print(f"test{estimator}\n")
 
-    model     = XGBClassifier(  n_estimators = estimator, learning_rate = 0.2,
+    model     = XGBClassifier(  n_estimators = estimator, learning_rate = 0.1,
                                 eval_metric = "logloss", scale_pos_weight = weight, use_label_encoder =False,
-                                verbosity=0, n_jobs = 30
+                                verbosity=0, n_jobs = 30, early_stopping_rounds=20
                             )
                             
-    model.fit(xtrain,ytrain, eval_set=[(xval,yval)])
-    model.save_model(f"/work/aavocone/models/3_0_model{estimator}.txt")
+    model.fit(xtrain,ytrain, eval_set=[(xtrain,ytrain),(xval,yval)], xgb_model=model1000)
+    model.save_model(f"/ceph/aavocone/models/3_0_model{estimator}_validation.txt")

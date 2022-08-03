@@ -7,7 +7,7 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 
 
-def efficiency(yprob,ytest):
+def efficiency(yprob, ytest, eff_type = "signal"):
     bin_edges = np.linspace(0,1,101)
     s_eff = []
     b_eff = []
@@ -17,9 +17,17 @@ def efficiency(yprob,ytest):
     s_hist= yprob*ytest
     s_hist = s_hist[s_hist!=0]      #overwrites s_hist with an array with no 0 values
     counts,_ = np.histogram(s_hist,bins = bin_edges)
-    for i in range(len(bin_edges)):
-        s_eff.append(sum(counts[i:])/sum(counts))
-    s_eff = np.array(s_eff)
+    
+    if eff_type == "signal":
+        for i in range(len(bin_edges)):
+            s_eff.append(sum(counts[i:])/sum(counts))
+        s_eff = np.array(s_eff)
+        print("Signal efficiency calculated.")
+    else: 
+        for i in range(len(bin_edges)):
+            s_eff.append(sum(counts[i:])/100000)
+        s_eff = np.array(s_eff)
+        print("Reconstruction efficiency with n=100.000 calculated.")
 
 
     #----------------BACKGROUND.............................................

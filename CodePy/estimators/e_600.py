@@ -43,5 +43,5 @@ if __name__ == "__main__":
                                 verbosity=0, n_jobs = 30
                             )
                             
-    model.fit(xtrain,ytrain, eval_set=[(xval,yval)], xgb_model=model500)
+    model.fit(xtrain,ytrain, eval_set=[(xtrain,ytrain),(xval,yval)], xgb_model=model500)
     model.save_model(f"/ceph/aavocone/models/3_0_model{estimator}.txt")

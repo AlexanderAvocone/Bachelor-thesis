@@ -53,5 +53,5 @@ if __name__ == "__main__":
                                 verbosity=0, n_jobs = 30
                             )
                             
-    model.fit(xtrain,ytrain, eval_set=[(xval,yval)])
-    model.save_model(f"/work/aavocone/models/3_0_model{estimator}.txt")
+    model.fit(xtrain,ytrain, eval_set=[(xtrain,ytrain),(xval,yval)])
+    model.save_model(f"/ceph/aavocone/models/3_0_model{estimator}.txt")
