@@ -3,7 +3,7 @@ import pandas as pd
 from functions import load_parquet
 from imblearn.over_sampling import RandomOverSampler
 from sklearn.model_selection import train_test_split
-
+from xgboost import XGBClassifier
 
 
 if __name__ == "__main__":

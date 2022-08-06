@@ -29,7 +29,7 @@ if __name__ == "__main__":
 
 
     #test train split
-    X = df[df.columns[:-3]]    #exclude "signal" "classification"
+    X = df[df.columns[:-1]]    #exclude "signal" "classification"
     y = df["signal"]            
     print("test2\n")
     xtrain,xtest,ytrain,ytest = train_test_split(X, y, test_size = 0.33, stratify = y)

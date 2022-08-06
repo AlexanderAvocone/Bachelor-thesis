@@ -17,7 +17,7 @@ if __name__ == "__main__":
     df = df.to_pandas()
 
     #test train split
-    X = df[df.columns[:-3]]    #exclude "signal" "classification"
+    X = df[df.columns[:-1]]    #exclude "signal" "classification"
     print(X.columns)
     y = df["signal"]            
     print("test2\n")
@@ -43,4 +43,4 @@ if __name__ == "__main__":
                             )
                             
     model.fit(xtrain,ytrain, eval_set=[(xtrain,ytrain),(xval,yval)], xgb_model=model500)
-    model.save_model(f"/ceph/aavocone/models/3_0_model{estimator}_increment_learning.txt")
+    model.save_model(f"/ceph/aavocone/models/3_0_model{estimator}.txt")

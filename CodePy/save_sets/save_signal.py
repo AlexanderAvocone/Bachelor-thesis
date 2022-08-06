@@ -17,7 +17,6 @@ if __name__ == "__main__":
     print("Test data")
     data        = uproot.open("/ceph/aavocone/Data/processed_simulation_B_K_a_nunu_ma_4_6_GeV_100000_events_nobdtcut.root:tree_Bsig;1").arrays(index, library ="pd")
     data["signal"]  = np.ones(len(data))
-    data["class"]   = np.ones(len(data))
     data.drop(data[data["B_sig_isSignalAcceptMissingNeutrino"]==0.0].index, inplace = True)
     data.drop("B_sig_isSignalAcceptMissingNeutrino", axis=1, inplace= True)
 

@@ -17,7 +17,7 @@ if __name__ == "__main__":
     print("Test charged")
     charged     = uproot.open('/ceph/aavocone/Data/kplus_v34_kshort_v34_100invfb_test_nobdtcut_16812.root:tree_Bsig;1').arrays(index, library ="pd")
     charged["signal"]  = np.zeros(len(charged))
-    charged["class"]   = np.ones(len(charged))*2
+  
     
 
     print("Test save carged to hdf5")

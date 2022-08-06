@@ -17,7 +17,7 @@ if __name__ == "__main__":
     df = df.to_pandas()
 
     #test train split
-    X = df[df.columns[:-3]]    #exclude "signal" "classification"
+    X = df[df.columns[:-1]]    #exclude "signal" "classification"
     print(X.columns)
     y = df["signal"]            
     print("test2\n")
@@ -30,8 +30,7 @@ if __name__ == "__main__":
     weight = (len(ytest)-sum(ytest))/sum(ytest)
     print("test4\n")
 
-    model_test = xgb.XGBClassifier()
-    model_test.load_model("/ceph/aavocone/models/3_0_model500.txt")
+
     estimator = 500
 
 
@@ -41,6 +40,7 @@ if __name__ == "__main__":
                                 eval_metric = "logloss", scale_pos_weight = weight, use_label_encoder =False,
                                 verbosity=0, n_jobs = 30, early_stopping_rounds=20
                             )
-                            
-    model.fit(xtrain,ytrain, eval_set=[(xtrain,ytrain),(xval,yval)], xgb_model=model_test)
-    model.save_model(f"/ceph/aavocone/models/0_0_model{estimator}.txt")
+    print("model training")                           
+    model.fit(xtrain,ytrain, eval_set=[(xtrain,ytrain),(xval,yval)])
+    print("saving model")
+    model.save_model(f"/ceph/aavocone/models/new_0_0_model{estimator}.txt")

@@ -17,7 +17,7 @@ if __name__ == "__main__":
     df = df.to_pandas()
 
     #test train split
-    X = df[df.columns[:-3]]    #exclude "signal" "classification"
+    X = df[df.columns[:-1]]    #exclude "signal" "classification"
     print(X.columns)
     y = df["signal"]            
     print("test2\n")

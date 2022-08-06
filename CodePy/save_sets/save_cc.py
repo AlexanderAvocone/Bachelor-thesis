@@ -17,7 +17,7 @@ if __name__ == "__main__":
     print("Test cc")
     cc     = uproot.open('/ceph/aavocone/Data/kplus_v34_kshort_v34_100invfb_test_nobdtcut_16792.root:tree_Bsig;1').arrays(index, library ="pd")
     cc["signal"]  = np.zeros(len(cc))
-    cc["class"]   = np.ones(len(cc))*5
+
     
 
     print("Test save cc to hdf5")

@@ -28,7 +28,7 @@ if __name__ == "__main__":
 
 
     #test train split
-    X = df[df.columns[:-3]]    #exclude "signal" "classification"
+    X = df[df.columns[:-1]]    #exclude "signal" "classification"
     y = df["signal"]            
     print("test2\n")
     xtrain,xtest,ytrain,ytest = train_test_split(X, y, test_size = 0.33, stratify = y)
@@ -41,8 +41,6 @@ if __name__ == "__main__":
     print("test4\n")
 
 
-    model1000 = xgb.XGBClassifier()
-    model1000.load_model("/ceph/aavocone/models/3_0_model1000.txt")
     estimator = 1000
 
 
@@ -53,5 +51,5 @@ if __name__ == "__main__":
                                 verbosity=0, n_jobs = 30, early_stopping_rounds=20
                             )
                             
-    model.fit(xtrain,ytrain, eval_set=[(xtrain,ytrain),(xval,yval)], xgb_model=model1000)
+    model.fit(xtrain,ytrain, eval_set=[(xtrain,ytrain),(xval,yval)])
     model.save_model(f"/ceph/aavocone/models/3_0_model{estimator}_validation.txt")

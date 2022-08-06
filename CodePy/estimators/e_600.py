@@ -17,7 +17,7 @@ if __name__ == "__main__":
     df = df.to_pandas()
 
     #test train split
-    X = df[df.columns[:-3]]    #exclude "signal" "classification"
+    X = df[df.columns[:-1]]    #exclude "signal" "classification"
     print(X.columns)
     y = df["signal"]            
     print("test2\n")
@@ -31,8 +31,6 @@ if __name__ == "__main__":
     print("test4\n")
 
 
-    model500 = xgb.XGBClassifier()
-    model500.load_model("/work/aavocone/models/model500.txt")
     estimator = 600
 
 
@@ -43,5 +41,5 @@ if __name__ == "__main__":
                                 verbosity=0, n_jobs = 30
                             )
                             
-    model.fit(xtrain,ytrain, eval_set=[(xtrain,ytrain),(xval,yval)], xgb_model=model500)
+    model.fit(xtrain,ytrain, eval_set=[(xtrain,ytrain),(xval,yval)])
     model.save_model(f"/ceph/aavocone/models/3_0_model{estimator}.txt")

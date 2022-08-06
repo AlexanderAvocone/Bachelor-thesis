@@ -17,7 +17,7 @@ if __name__ == "__main__":
     print("Test uu")
     uu     = uproot.open('/ceph/aavocone/Data/kplus_v34_kshort_v34_100invfb_test_nobdtcut_16802.root:tree_Bsig;1').arrays(index, library ="pd")
     uu["signal"]  = np.zeros(len(uu))
-    uu["class"]   = np.ones(len(uu))*4
+
     
 
     print("Test save uu to hdf5")

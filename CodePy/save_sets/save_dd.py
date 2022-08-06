@@ -17,7 +17,7 @@ if __name__ == "__main__":
     print("Test dd")
     dd     = uproot.open('/ceph/aavocone/Data/kplus_v34_kshort_v34_100invfb_test_nobdtcut_16797.root:tree_Bsig;1').arrays(index, library ="pd")
     dd["signal"]  = np.zeros(len(dd))
-    dd["cladd"]   = np.ones(len(dd))*6
+
     
 
     print("Test save dd to hdf5")

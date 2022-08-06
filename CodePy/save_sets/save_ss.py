@@ -17,7 +17,7 @@ if __name__ == "__main__":
     print("Test ss")
     ss     = uproot.open('/ceph/aavocone/Data/kplus_v34_kshort_v34_100invfb_test_nobdtcut_16807.root:tree_Bsig;1').arrays(index, library ="pd")
     ss["signal"]  = np.zeros(len(ss))
-    ss["class"]   = np.ones(len(ss))*7
+   
     
 
     print("Test save ss to hdf5")

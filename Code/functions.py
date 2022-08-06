@@ -96,7 +96,6 @@ def PFOM(seff,beff,bhist,n):
     return seff/(np.sqrt(beff*sum(bhist))+n/2)
 
 def load_parquet(data_path_as_parquet):
-    df = pq.read_table(data_path_as_parquet).to_pandas()
-    print(df.columns)
-    print("\n\n!!!!!!!! Remove the class and cladd column !!!!!!!")
-    return df
+    return pq.read_table(data_path_as_parquet).to_pandas()
+
+    
