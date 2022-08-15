@@ -32,7 +32,7 @@ if __name__ == "__main__":
 
     model500 = xgb.XGBClassifier()
     model500.load_model("/work/aavocone/models/model100.txt")
-    estimator = 500
+    estimator = 141
 
 
     print(f"test{estimator}\n")
