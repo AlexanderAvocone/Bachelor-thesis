@@ -7,7 +7,7 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 
 
-def efficiency(yprob, ytest, eff_type = "signal"):
+def efficiency(yprob, ytest):
     bin_edges = np.linspace(0,1,101)
     s_eff = []
     b_eff = []
@@ -17,17 +17,10 @@ def efficiency(yprob, ytest, eff_type = "signal"):
     s_hist= yprob*ytest
     s_hist = s_hist[s_hist!=0]      #overwrites s_hist with an array with no 0 values
     counts,_ = np.histogram(s_hist,bins = bin_edges)
-    
-    if eff_type == "signal":
-        for i in range(len(bin_edges)):
-            s_eff.append(sum(counts[i:])/sum(counts))
-        s_eff = np.array(s_eff)
-        print("Signal efficiency calculated.")
-    else: 
-        for i in range(len(bin_edges)):
-            s_eff.append(sum(counts[i:])/100000)
-        s_eff = np.array(s_eff)
-        print("Reconstruction efficiency with n=100.000 calculated.")
+
+    for i in range(len(bin_edges)):
+        s_eff.append(sum(counts[i:])/33333)
+    s_eff = np.array(s_eff)
 
 
     #----------------BACKGROUND.............................................
@@ -98,4 +91,7 @@ def PFOM(seff,beff,bhist,n):
 def load_parquet(data_path_as_parquet):
     return pq.read_table(data_path_as_parquet).to_pandas()
 
+
+
+    
     
